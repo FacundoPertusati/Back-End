@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Listado productos</title>
+    <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+  </head>
+  <body>
+    <div class="col-md-10 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+            <!-- Title -->
+          <h1>Products</h1>
+        </div>
+        <div class="card-header">
+            <!-- Subtitle -->
+          <h3>Talk about the products</h3>
+        </div>
+        <div>
+            <div id="mensajes" style="width:800px; height:300px; overflow: scroll;">
+        </div>
+        <div class="container pt-3">
+          <div class="row  d-flex justify-content-center ">
+            <div class="col-10 pb-3">
+              <form onsubmit="return addMensaje(this)">
+                <div class="row g-4">
+                  <strong> insert your email to comment</strong>
+                  <div class="col-3">
+                    <input type="text" name="email" class="form-control" placeholder="Email@gmail.com" aria-label="Email" id="email">
+                  </div>
+                  <div class="col-sm">
+                    <input type="text" name="opinion" class="form-control" placeholder="talk about our products" aria-label="opinion" id="opinion">
+                  </div>
+                  <div class="col-1">
+                    <input type="submit" class="btn btn-primary" value="send">
+                  </div>
+              </form>
+            </div>
+          </div>
+        <div class="card-header">
+            <!-- Product form -->
+          <h3>Add new product</h3>
+        </div>
+    <div class="container pt-3">
+      <div class="row  d-flex justify-content-center ">
+        <div class="col-8 pb-3">
+          <form onsubmit="return addMessage(this)">
+            <div class="row g-3">
+              <div class="col-sm">
+                <input type="text" name="title" class="form-control" placeholder="title" aria-label="Title" id="title">
+              </div>
+              <div class="col-sm">
+                <input type="text" name="price" class="form-control" placeholder="price" aria-label="Price" id="price">
+              </div>
+              <div class="col-sm">
+                <input type="text"  class="form-control" placeholder="thumbnail" aria-label="Thumbnail" id="thumbnail">
+              </div>
+              <div class="col-sm">
+                <input type="submit" class="btn btn-primary" value="Guardar producto">
+              </div>
+            </div>
+          </form>
+       </div>
+      </div>
+    </div>
+    <div class="card text-center">
+        <!-- List title -->
+      <h3>LIST</h3>
+    </div>
+    <div class="container">
+      <div class="table">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">PRICE</th>
+              <th scope="col">thumbnail</th>
+            </tr>
+          </thead>
+          <tbody id="messages">
+        </table>
+      </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
