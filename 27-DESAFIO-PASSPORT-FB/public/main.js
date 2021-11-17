@@ -1,9 +1,6 @@
 //calls socket and set connection
 //table config
 //function thar render the new data element by element into html
-
-let ArrayMensajes = []
-
 function render(data) {
   console.log(typeof data)
   var html = data
@@ -71,7 +68,7 @@ function addMensaje(e) {
     date: date,
     opinion: document.getElementById("opinion").value,
     };
-ArrayMensajes.push(mensaje)
+console.log(mensaje)
 if(document.getElementById("email").value != 0){
 //emit var message with form values with the event new-messages
 socket.emit("new-mensaje", mensaje);
