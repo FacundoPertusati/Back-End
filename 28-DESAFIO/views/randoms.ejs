@@ -1,0 +1,18 @@
+
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h3>Listado Random</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Number : Quantity </li>
+                    <% for(var i=0; i < Object.keys(listRandom).length; i++) { %>
+                        <li class="list-group-item"><%- Object.keys(listRandom)[i] %> : <%- Object.values(listRandom)[i] %> </li>
+                    <% } %>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</div>
