@@ -254,6 +254,7 @@ class Mongo {
               res.json("item eliminado del carrito" + carr)
          };
 
-}
+};
 
-module.exports = {Mongo}
+module.exports = {Mongo} 
+
